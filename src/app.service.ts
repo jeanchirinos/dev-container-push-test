@@ -3,6 +3,22 @@ import { Injectable } from '@nestjs/common';
 @Injectable()
 export class AppService {
   getHello(): string {
-    return 'Hello World 2!';
+    console.log('Hello World 7!');
+
+    const a = {
+      a: 1,
+      b: [
+        {
+          a: 1,
+          c: 3,
+        },
+      ],
+    };
+
+    console.log({ a: JSON.stringify(a) });
+
+    // I want to return json
+
+    return JSON.stringify(a);
   }
 }
